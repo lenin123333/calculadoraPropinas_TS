@@ -2,7 +2,7 @@ import type { MenuItem } from "../types"
 
 type MenuItemProps={
     item: MenuItem,
-    addItem:()=>void
+    addItem:(item:MenuItem)=>void
 }
 
 export default function MenuItem({item,addItem} :MenuItemProps) {
@@ -10,7 +10,7 @@ export default function MenuItem({item,addItem} :MenuItemProps) {
     <button
         className="border-2 border-teal-400 hover:bg-teal-400  
         w-full p-3 flex justify-between "
-        onClick={()=>addItem()}
+        onClick={()=>addItem(item)}
     > 
       <p>{item.name}</p>
       <p className=" font-bold">{item.price}</p>

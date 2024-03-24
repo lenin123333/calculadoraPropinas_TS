@@ -3,9 +3,11 @@ import type { OrderItem } from "../types"
 
 
 export default function useOrder(){
-    const [order,setOrder] = useState<OrderItem>()
-    
-    return{
+    const [order,setOrder] = useState<OrderItem[]>([])
+    const addItem=()=>{
 
+    }
+    return{
+        addItem
     }
 }
